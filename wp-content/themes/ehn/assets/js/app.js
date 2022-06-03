@@ -1,0 +1,6 @@
+jQuery(function($){$("#wp-megamenu-item-99837").hover(function(){$('#locations-nav-desktop').show();});$(".wp-megamenu-sub-menu").hover(function(){$('#locations-nav-desktop').hide();});$(".footer-arrow-1 h6").click(function(){$('.footer-arrow-1 h6:after').css({"background-color":"red"});});$('#push_notification').on('click','#toast-close',function(){if($.cookie('whenToShowDialog')==null){$.cookie('whenToShowDialog','whenToShowDialog',{expires:1825,path:'/'});$('#push_notification').hide();}});if(typeof $.cookie('whenToShowDialog')==='undefined'){setTimeout(function(){$('#push_notification').show();},3000);}else{$('#push_notification').hide();}
+$('.locations-arrow').click(function(){$('#program-nav-desktop').toggle();});var lm1=$('.l-m-1').innerWidth();var lm2=$('.l-m-2').innerWidth();if(lm2){menuwidth=lm1+lm2;}else{menuwidth=lm1;}
+$('.locations-header #program-nav').hover(function(){$(".locations-header #program-nav-desktop").css({"left":menuwidth+"px"});});const $leadWayOpen=jQuery('.lead-way-btn')
+const $leadWay=jQuery(".lead-way");const $leadWayCloseBtn=jQuery('.close-btn');$leadWayOpen.on('click',function(){$leadWay.show();})
+$leadWayCloseBtn.on('click',function(){$leadWay.hide();})
+$('.modal-toggle').on('click',function(e){e.preventDefault();$('.modal').toggleClass('is-visible');});});
